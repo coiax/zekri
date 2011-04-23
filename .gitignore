@@ -1,0 +1,71 @@
+## vim.gitignore ##
+.*.sw[a-z]
+*.un~
+
+## Linux.gitignore ##
+*~
+*.sw[a-p]
+
+# KDE
+.directory
+
+
+## Python.gitignore ##
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+develop-eggs
+.installed.cfg
+
+# Compiled modules
+*.py[co]
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# Manifest file
+MANIFEST
+
+## OSX.gitignore ##
+.DS_Store?
+Icon?
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+## emacs.gitignore
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+
+
+## C++.gitignore
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
