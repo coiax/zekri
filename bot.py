@@ -8,10 +8,12 @@ import sys
 from twisted.words.protocols import irc
 from twisted.internet import protocol
 
-class BanliBot(irc.IRCClient):
-    nickname = "DrBanli"
-    def connectionMade(self):
-        irc.IRCClient.connectionMade(self)
+
+class MafiaBot(irc.IRCClient):
+    def __init__(self,nickname="zekri"):
+        irc.IRCClient.__init__(self)
+        self.nickname = nickname
+
     def signedOn(self):
         self.join(self.factory.channel)
     def userJoined(self,user,channel):
@@ -28,11 +30,11 @@ class BanliBot(irc.IRCClient):
         if channel == self.nickname:
             self.factory.add_to_map(msg)
 
-class BanliFactory(protocol.ClientFactory):
+class MafiaFactory(protocol.ClientFactory):
 
-    protocol = BanliBot
+    protocol = MafiaBot
 
-    def __init__(self,channel="#awesome"):
+    def __init__(self,channel="#mafiozi"):
         self.channel = channel
         self.map = {}
         with open(sys.argv[2]) as f:
